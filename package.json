@@ -1,6 +1,6 @@
 {
-  "name": "trackers-main",
-  "version": "1.0.0",
+  "name": "trackers",
+  "version": "0.0.0",
   "description": "Default trackers for Paperback",
   "main": "lib/index.js",
   "scripts": {
