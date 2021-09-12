@@ -2627,10 +2627,10 @@ class Mangadex extends paperback_extensions_common_1.Tracker {
             const desc = mangaDetails.description.en
                 .replace(/&#(\d+);/g, (_m, d) => String.fromCharCode(d))
                 .replace(/\[\/{0,1}[bus]\]/g, ''); // Get rid of BBcode tags
-            let status = paperback_extensions_common_1.MangaStatus.COMPLETED;
-            if (mangaDetails.status == 'ongoing') {
-                status = paperback_extensions_common_1.MangaStatus.ONGOING;
-            }
+            // let status = MangaStatus.COMPLETED;
+            // if (mangaDetails.status == 'ongoing') {
+            //     status = MangaStatus.ONGOING;
+            // }
             const tags = [];
             for (const tag of mangaDetails.tags) {
                 const tagName = tag.attributes.name;
