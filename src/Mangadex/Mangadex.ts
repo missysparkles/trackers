@@ -316,10 +316,10 @@ export class Mangadex extends Tracker {
                 String.fromCharCode(d)
             )
             .replace(/\[\/{0,1}[bus]\]/g, ''); // Get rid of BBcode tags
-        let status = MangaStatus.COMPLETED;
-        if (mangaDetails.status == 'ongoing') {
-            status = MangaStatus.ONGOING;
-        }
+        // let status = MangaStatus.COMPLETED;
+        // if (mangaDetails.status == 'ongoing') {
+        //     status = MangaStatus.ONGOING;
+        // }
         const tags: Tag[] = [];
         for (const tag of mangaDetails.tags) {
             const tagName: { [index: string]: string } = tag.attributes.name;
@@ -361,7 +361,7 @@ export class Mangadex extends Tracker {
                 artist,
                 desc,
                 rating: 5,
-                status: mangaDetails.status, // wtf?
+                status: mangaDetails.status as MangaStatus, // this is a lie
                 tags: [
                     createTagSection({
                         id: 'tags',
